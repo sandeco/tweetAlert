@@ -22,8 +22,8 @@ public class Notifyer{
 		// criar notificação
 		NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(MyApp.getAppContext());
 		mBuilder.setSmallIcon(R.drawable.ic_launcher);
-		mBuilder.setContentTitle(term + " EA Server");
-		mBuilder.setContentText("Foi detectada o termo " + term + " em " + tweet.getUser().getScreenName());
+		mBuilder.setContentTitle("Termo detectado");
+		mBuilder.setContentText(term + " em " + tweet.getUser().getScreenName());
 
 		
 		Uri sound = Uri.parse("android.resource://" + MyApp.getAppContext().getPackageName() + "/" + R.raw.ea);
