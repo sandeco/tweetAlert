@@ -1,5 +1,8 @@
 package com.tweetalert.dao;
 
+import com.tweetalert.model.Term;
+import com.tweetalert.model.Tweet;
+
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -16,14 +19,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 	@Override
 	public void onCreate(SQLiteDatabase db) {
 		
-		db.execSQL("CREATE TABLE tweet (_id long PRIMARY KEY, "+ 
-                    "text TEXT, "+
-                    "date TEXT, "+
-                    "user TEXT)");
-		
-		db.execSQL("CREATE TABLE terms (_id INTEGER PRIMARY KEY, "+ 
-                    "termo TEXT, " +
-                    "profile TEXT )");
+		db.execSQL(Tweet.CREATE_TABLE);
+		db.execSQL(Term.CREATE_TABLE);
                     
 	}
 

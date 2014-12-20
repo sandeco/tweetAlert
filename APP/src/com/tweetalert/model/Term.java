@@ -8,7 +8,7 @@ public class Term implements Serializable {
 	
 	private int id;
 	private String term;
-	private String user;
+	private String profile;
 	
 	public Term(){}
 
@@ -28,12 +28,27 @@ public class Term implements Serializable {
 		this.term = term;
 	}
 
-	public String getUser() {
-		return user;
+	public String getProfile() {
+		return profile;
 	}
 
-	public void setUser(String user) {
-		this.user = user;
+	public void setProfile(String profile) {
+		this.profile = profile;
 	}
+
 	
+	
+	public static final String TABLE_NAME = "term";
+	public static final String ID    = "_id";
+	public static final String TERM  = "nome";
+	public static final String PROFILE  = "profile";
+ 
+	public static final String CREATE_TABLE = "" +
+	
+							   "CREATE TABLE terms (" +
+							   "_id INTEGER PRIMARY KEY, "+ 
+							   "termo TEXT, " +
+							   "profile TEXT )";
+									
+										
 }

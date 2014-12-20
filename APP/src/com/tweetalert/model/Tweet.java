@@ -41,4 +41,22 @@ public class Tweet implements Serializable{
 		this.user = user;
 	}
 	
+	
+	
+	public static final String TABLE_NAME = "tweet";
+	public static final String ID    = "_id";
+	public static final String TEXT  = "text";
+	public static final String USER  = "user";
+	
+	public static final String[] COLUNAS = new String[]{Tweet.ID,Tweet.TEXT,Tweet.USER};
+
+	public static final String CREATE_TABLE = "" +
+	
+			
+								"CREATE TABLE tweet (" +
+								"_id long PRIMARY KEY," + 
+								"text TEXT," +
+								"date TEXT," +
+								"user TEXT)";
+	
 }
